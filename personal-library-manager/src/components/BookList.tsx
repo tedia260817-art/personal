@@ -4,6 +4,7 @@ import useSWR from 'swr';
 import { getBooks } from '../services/api';
 import { Book } from '../types/Book';
 import BookItem from './BookItem';
+import EmptyList from './EmptyList';
 
 const fetcher = () => getBooks().then(res => res.data);
 
@@ -12,6 +13,9 @@ const BookList: React.FC = () => {
 
   if (error) return <div>Error loading books</div>;
   if (!data) return <div>Loading...</div>;
+
+  // Render the EmptyList component if the data array is empty
+  if (data.length === 0) return <EmptyList />;
 
   return (
     <Grid container spacing={1} margin={2}>

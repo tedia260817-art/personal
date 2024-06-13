@@ -52,12 +52,16 @@ const BookItem: React.FC<BookItemProps> = ({ book }) => {
 
   return (
     <>
-      <LibCard>
-        <CardContent>
+<LibCard>
+     <CardContent>
           <Typography variant="h5">{book.title}</Typography>
-          <Typography variant="body2" color="textSecondary">{book.author}</Typography>
-          <Typography variant="body2">{book.genre}</Typography>
-          <Typography variant="body2">{book.description}</Typography>
+    <Typography variant="body2" color="textSecondary">{book.author}</Typography>
+          <Typography variant="body2">
+            <strong>Genre: </strong>{book.genre}
+          </Typography>
+          <Typography variant="body2">
+            <strong>Description: </strong>{book.description}
+          </Typography>
         </CardContent>
         <CardActions>
           <Button size="small" color="primary" onClick={() => navigate(`/edit/${book.id}`)}>
