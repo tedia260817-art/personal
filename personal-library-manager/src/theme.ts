@@ -74,6 +74,11 @@ const theme = createTheme({
         root: {
           borderRadius: '8px',
         },
+        outlined: (props) => ({
+          margin: '10px',
+          backgroundColor: green[600],
+          color: props.theme.palette.background.paper,
+        }),
       },
       defaultProps: {
         variant: 'contained',
