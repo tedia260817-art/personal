@@ -14,7 +14,7 @@ const BookList: React.FC = () => {
   if (!data) return <div>Loading...</div>;
 
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={1} margin={2}>
       {data.map((book: Book) => (
         <BookItem key={book.id} book={book} />
       ))}

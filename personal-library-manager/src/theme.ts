@@ -68,6 +68,55 @@ const theme = createTheme({
       textTransform: 'none'
     },
   },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: '8px',
+        },
+      },
+      defaultProps: {
+        variant: 'contained',
+        color: 'primary',
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          marginBottom: '16px',
+        },
+      },
+      defaultProps: {
+        variant: 'outlined',
+        fullWidth: true,
+      },
+    },
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          paddingTop: '16px',
+          paddingBottom: '16px',
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          margin: '16px',
+          borderRadius: '12px',
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+          transition: 'transform 0.2s',
+          '&:hover': {
+            transform: 'scale(1.02)',
+          },
+        },
+      },
+      defaultProps: {
+        variant: 'elevation',
+        elevation: 3,
+      },
+    },
+  },
 });
 
 export default theme;
