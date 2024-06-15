@@ -14,7 +14,7 @@ interface BookItemProps {
   book: Book;
 }
 
-const fetcher = () => getBooks().then(res => res.data);
+const fetcher = () => getBooks().then((res) => res.data);
 
 const BookItem: React.FC<BookItemProps> = ({ book }) => {
   const navigate = useNavigate();
@@ -52,19 +52,27 @@ const BookItem: React.FC<BookItemProps> = ({ book }) => {
 
   return (
     <>
-<LibCard>
-     <CardContent>
+      <LibCard>
+        <CardContent>
           <Typography variant="h5">{book.title}</Typography>
-    <Typography variant="body2" color="textSecondary">{book.author}</Typography>
-          <Typography variant="body2">
-            <strong>Genre: </strong>{book.genre}
+          <Typography variant="body2" color="textSecondary">
+            {book.author}
           </Typography>
           <Typography variant="body2">
-            <strong>Description: </strong>{book.description}
+            <strong>Genre: </strong>
+            {book.genre}
+          </Typography>
+          <Typography variant="body2">
+            <strong>Description: </strong>
+            {book.description}
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small" color="primary" onClick={() => navigate(`/edit/${book.id}`)}>
+          <Button
+            size="small"
+            color="primary"
+            onClick={() => navigate(`/edit/${book.id}`)}
+          >
             <EditIcon />
           </Button>
           <Button size="small" color="secondary" onClick={handleDelete}>

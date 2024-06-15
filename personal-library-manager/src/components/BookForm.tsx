@@ -10,10 +10,22 @@ interface BookFormProps {
 }
 
 const validationSchema = Yup.object({
-  title: Yup.string().required('Required'),
-  author: Yup.string().required('Required'),
-  genre: Yup.string().required('Required'),
-  description: Yup.string().required('Required'),
+  title: Yup.string()
+    .min(2, 'Title must be at least 2 characters long')
+    .max(100, 'Title must be at most 100 characters long')
+    .required('Title is required'),
+  author: Yup.string()
+    .min(2, 'Author must be at least 2 characters long')
+    .max(50, 'Author must be at most 50 characters long')
+    .required('Author is required'),
+  genre: Yup.string()
+    .min(2, 'Genre must be at least 2 characters long')
+    .max(50, 'Genre must be at most 50 characters long')
+    .required('Genre is required'),
+  description: Yup.string()
+    .min(10, 'Description must be at least 10 characters long')
+    .max(500, 'Description must be at most 500 characters long')
+    .required('Description is required'),
 });
 
 const BookForm: React.FC<BookFormProps> = ({ initialValues, onSubmit }) => {
@@ -73,7 +85,9 @@ const BookForm: React.FC<BookFormProps> = ({ initialValues, onSubmit }) => {
             label="Description"
             value={formik.values.description}
             onChange={formik.handleChange}
-            error={formik.touched.description && Boolean(formik.errors.description)}
+            error={
+              formik.touched.description && Boolean(formik.errors.description)
+            }
             helperText={formik.touched.description && formik.errors.description}
           />
         </Grid>

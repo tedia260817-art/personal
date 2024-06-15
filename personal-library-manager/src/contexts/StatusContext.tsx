@@ -13,13 +13,24 @@ interface StatusContextProps {
 
 const StatusContext = createContext<StatusContextProps | undefined>(undefined);
 
-export const StatusProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const StatusProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [statusMessage, setStatusMessage] = useState('');
   const [statusSeverity, setStatusSeverity] = useState<Severity>('success');
   const [statusOpen, setStatusOpen] = useState(false);
 
   return (
-    <StatusContext.Provider value={{ statusMessage, setStatusMessage, statusSeverity, setStatusSeverity, statusOpen, setStatusOpen }}>
+    <StatusContext.Provider
+      value={{
+        statusMessage,
+        setStatusMessage,
+        statusSeverity,
+        setStatusSeverity,
+        statusOpen,
+        setStatusOpen,
+      }}
+    >
       {children}
     </StatusContext.Provider>
   );

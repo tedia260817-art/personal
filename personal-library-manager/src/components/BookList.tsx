@@ -6,7 +6,7 @@ import { Book } from '../types/Book';
 import BookItem from './BookItem';
 import EmptyList from './EmptyList';
 
-const fetcher = () => getBooks().then(res => res.data);
+const fetcher = () => getBooks().then((res) => res.data);
 
 const BookList: React.FC = () => {
   const { data, error } = useSWR('/books', fetcher);

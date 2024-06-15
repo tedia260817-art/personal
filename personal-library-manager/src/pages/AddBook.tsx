@@ -52,8 +52,13 @@ const AddBook: React.FC = () => {
   return (
     <Window>
       <LibContainer>
-        <Typography variant="h4" gutterBottom>Add New Book</Typography>
-        <BookForm initialValues={{ title: '', author: '', genre: '', description: '' }} onSubmit={handleSubmit} />
+        <Typography variant="h4" gutterBottom>
+          Add New Book
+        </Typography>
+        <BookForm
+          initialValues={{ title: '', author: '', genre: '', description: '' }}
+          onSubmit={handleSubmit}
+        />
       </LibContainer>
       <ConfirmDialog
         open={confirmOpen}

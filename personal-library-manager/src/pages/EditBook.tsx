@@ -10,7 +10,7 @@ import { Book } from '../types/Book';
 import ConfirmDialog from '../components/ConfirmDialog';
 import { useStatus } from '../contexts/StatusContext';
 
-const fetcher = (id: string) => getBook(parseInt(id)).then(res => res.data);
+const fetcher = (id: string) => getBook(parseInt(id)).then((res) => res.data);
 
 const EditBook: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -63,7 +63,9 @@ const EditBook: React.FC = () => {
   return (
     <Window>
       <LibContainer>
-        <Typography variant="h4" gutterBottom>Edit Book</Typography>
+        <Typography variant="h4" gutterBottom>
+          Edit Book
+        </Typography>
         <BookForm initialValues={data} onSubmit={handleSubmit} />
       </LibContainer>
       <ConfirmDialog

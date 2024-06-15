@@ -10,16 +10,16 @@ import { StatusProvider } from './contexts/StatusContext';
 const App: React.FC = () => {
   return (
     <StatusProvider>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/add" element={<AddBook />} />
-          <Route path="/edit/:id" element={<EditBook />} />
-        </Routes>
-      </Router>
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/add" element={<AddBook />} />
+            <Route path="/edit/:id" element={<EditBook />} />
+          </Routes>
+        </Router>
+      </ThemeProvider>
     </StatusProvider>
   );
 };

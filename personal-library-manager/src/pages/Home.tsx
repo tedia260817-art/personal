@@ -5,13 +5,14 @@ import Window from '../components/Window';
 import { LibContainer } from '../styled';
 
 const Home: React.FC = () => {
-
   return (
     <Window>
-    <LibContainer>
-      <Typography variant="h4" gutterBottom>Personal Library Manager</Typography>
-      <BookList />
-    </LibContainer>
+      <LibContainer>
+        <Typography variant="h4" gutterBottom>
+          Personal Library Manager
+        </Typography>
+        <BookList />
+      </LibContainer>
     </Window>
   );
 };

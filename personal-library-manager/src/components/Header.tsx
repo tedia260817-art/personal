@@ -10,8 +10,17 @@ const Header: React.FC = () => {
           My Library
         </Typography>
         <Box>
-          <Button variant="outlined" color="secondary" component={Link} to="/">Home</Button>
-          <Button variant="outlined" color="secondary" component={Link} to="/add">Add Book</Button>
+          <Button variant="outlined" color="secondary" component={Link} to="/">
+            Home
+          </Button>
+          <Button
+            variant="outlined"
+            color="secondary"
+            component={Link}
+            to="/add"
+          >
+            Add Book
+          </Button>
         </Box>
       </Toolbar>
     </AppBar>

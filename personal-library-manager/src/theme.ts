@@ -65,7 +65,7 @@ const theme = createTheme({
       fontSize: '0.875rem',
     },
     button: {
-      textTransform: 'none'
+      textTransform: 'none',
     },
   },
   components: {

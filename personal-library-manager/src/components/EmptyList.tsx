@@ -9,7 +9,7 @@ const EmptyList: React.FC = () => {
   return (
     <Box textAlign="center" margin={2}>
       <Typography variant="h6" gutterBottom>
-        No books available.
+        Start adding your first book in the library
       </Typography>
       <Button
         variant="contained"

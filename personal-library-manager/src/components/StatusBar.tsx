@@ -3,7 +3,8 @@ import React from 'react';
 import { useStatus } from '../contexts/StatusContext';
 
 const StatusBar: React.FC = () => {
-  const { statusMessage, statusSeverity, statusOpen, setStatusOpen } = useStatus();
+  const { statusMessage, statusSeverity, statusOpen, setStatusOpen } =
+    useStatus();
 
   const alertProps: AlertProps = {
     severity: statusSeverity,
@@ -11,7 +12,11 @@ const StatusBar: React.FC = () => {
   };
 
   return (
-    <Snackbar open={statusOpen} autoHideDuration={6000} onClose={() => setStatusOpen(false)}>
+    <Snackbar
+      open={statusOpen}
+      autoHideDuration={6000}
+      onClose={() => setStatusOpen(false)}
+    >
       <Alert {...alertProps}>{statusMessage}</Alert>
     </Snackbar>
   );
