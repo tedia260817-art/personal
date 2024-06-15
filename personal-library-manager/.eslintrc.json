@@ -53,6 +53,7 @@
         "caseSensitive": false
       }
     ],
-    "import/order": "off"
+    "import/order": "off",
+    "no-shadow": "off"
   }
 }

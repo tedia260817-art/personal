@@ -47,6 +47,7 @@ const BookForm: React.FC<BookFormProps> = ({ initialValues, onSubmit }) => {
             id="title"
             name="title"
             label="Title"
+            placeholder="Adventures of Huckleberry Finn"
             value={formik.values.title}
             onChange={formik.handleChange}
             error={formik.touched.title && Boolean(formik.errors.title)}
@@ -58,6 +59,7 @@ const BookForm: React.FC<BookFormProps> = ({ initialValues, onSubmit }) => {
             fullWidth
             id="author"
             name="author"
+            placeholder="Mark Twain"
             label="Author"
             value={formik.values.author}
             onChange={formik.handleChange}
@@ -71,6 +73,7 @@ const BookForm: React.FC<BookFormProps> = ({ initialValues, onSubmit }) => {
             id="genre"
             name="genre"
             label="Genre"
+            placeholder="Adventure"
             value={formik.values.genre}
             onChange={formik.handleChange}
             error={formik.touched.genre && Boolean(formik.errors.genre)}
@@ -83,6 +86,8 @@ const BookForm: React.FC<BookFormProps> = ({ initialValues, onSubmit }) => {
             id="description"
             name="description"
             label="Description"
+            placeholder="This book..."
+            multiline
             value={formik.values.description}
             onChange={formik.handleChange}
             error={
