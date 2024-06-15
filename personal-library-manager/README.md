@@ -17,8 +17,7 @@ This is a Personal Library Manager application built with React.js, TypeScript, 
 1. Clone the repositories:
 
    ```bash
-   git clone https://github.com/your-username/personal-library-manager.git
-   git clone https://github.com/your-username/personal-library-server.git
+   git clone https://github.com/tedia260817-art/personal.git
    ```
 
 2. Install dependencies for the React application:

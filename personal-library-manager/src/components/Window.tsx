@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Container } from '@mui/material';
-import Header from './Header';
+import Navbar from './NavBar';
 import Footer from './Footer';
 
 interface WindowProps {
@@ -16,7 +16,7 @@ const Window: React.FC<WindowProps> = ({ children }) => {
         minHeight: '100vh',
       }}
     >
-      <Header />
+      <Navbar />
       <Container component="main" sx={{ flex: 1, mt: 4 }}>
         {children}
       </Container>
