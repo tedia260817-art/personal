@@ -14,28 +14,56 @@ This is a Personal Library Manager application built with React.js, TypeScript, 
 
 ## Setup
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/your-username/personal-library-manager.git
-    cd personal-library-manager
-    ```
+1. Clone the repositories:
 
-2. Install dependencies:
-    ```bash
-    npm install
-    ```
+   ```bash
+   git clone https://github.com/your-username/personal-library-manager.git
+   git clone https://github.com/your-username/personal-library-server.git
+   ```
 
-3. Start the mock server:
-    ```bash
-    npm run server
-    ```
+2. Install dependencies for the React application:
 
-4. Start the React application:
-    ```bash
-    npm start
-    ```
+   ```bash
+   cd personal-library-manager
+   npm install
+   ```
+
+3. Install dependencies for the mock server:
+
+   ```bash
+   cd ../personal-library-server
+   npm install
+   ```
+
+4. Start the mock server:
+
+   ```bash
+   npm start
+   ```
+
+5. Start the React application:
+   ```bash
+   cd ../personal-library-manager
+   npm start
+   ```
 
 ## Usage
 
 - Open the application in your browser at `http://localhost:3000`.
 - Use the interface to manage your collection of books.
+
+## Scripts
+
+### React Application
+
+- `start`: Starts the React application.
+- `build`: Builds the React application for production.
+- `test`: Runs the test suite.
+- `eject`: Ejects the Create React App configuration.
+- `lint`: Runs ESLint to check for linting errors.
+- `lint:fix`: Runs ESLint and automatically fixes linting errors.
+- `format`: Runs Prettier to format the codebase.
+
+### Mock Server
+
+- `start`: Starts the mock server.
