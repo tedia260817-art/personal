@@ -9,7 +9,7 @@ import EmptyList from './EmptyList';
 const fetcher = () => getBooks().then((res) => res.data);
 
 const BookList: React.FC = () => {
-  const { data, error } = useSWR('/books', fetcher);
+  const { data, error } = useSWR<Book[]>('/books', fetcher);
 
   if (error) return <div>Error loading books</div>;
   if (!data) return <div>Loading...</div>;
